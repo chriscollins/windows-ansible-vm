@@ -10,7 +10,8 @@ ANSIBLE_HOSTS=/etc/ansible/hosts
 echo "Installing Ansible..."
 
 apt-get update -qq
-apt-get install ansible -y
+apt-get install python-pip python-paramiko python-yaml python-jinja2 python-simplejson -y
+pip install ansible
 
 while getopts ":c" opt; do
     case $opt in
